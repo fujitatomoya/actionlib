@@ -61,7 +61,7 @@ class SimpleActionServer
 {
 public:
   // generates typedefs that we'll use to make our lives easier
-  ACTION_DEFINITION(ActionSpec);
+  ACTION_DEFINITION(ActionSpec)
 
   typedef typename ActionServer<ActionSpec>::GoalHandle GoalHandle;
   typedef boost::function<void (const GoalConstPtr &)> ExecuteCallback;
@@ -204,7 +204,7 @@ public:
   void registerPreemptCallback(boost::function<void()> cb);
 
   /**
-   * @brief  Explicitly start the action server, used it auto_start is set to false
+   * @brief  Explicitly start the action server, used if auto_start is set to false
    */
   void start();
 
